@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1743675385 source:c:\users\nesli\onedrive\masaüstü\c++ oop\vectors(3)\main.cpp
+	<iostream>
+	<iomanip>
+	<vector>
+	<algorithm>
+
