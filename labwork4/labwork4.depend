@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1742637481 source:c:\users\nesli\onedrive\masaüstü\c++ oop\labwork4\main.cpp
+	<iostream>
+	<vector>
+	<iomanip>
+	<algorithm>
+	<cmath>
+
