@@ -1,35 +1,56 @@
 #include <iostream>
-
+#include <iomanip>
 using namespace std;
 
-class Bankaccount{
-private:
-    double balance;
+class salary {
 public:
-    Bankaccount(double initialbalance){
-        balance=(initialbalance>=0)?initialbalance:0;
-    }
-void deposit(double amount){
-    if(amount>0)
-        balance+=amount;
-}
-void withdraw(double amount){
-if(amount>=0&&amount<=balance)
-    balance-=amount;
-}
-
-void showbalance(){
-cout<<"balance is: "<<balance<<endl;
-}
+    salary();
+    void set_salary();
+    void print();
+private:
+    bool check(int);
+    int months[12];
+    int total;
 };
 
+salary::salary() {
+    for (int i = 0; i < 12; i++)
+        months[i] = 0;
+    total = 0;
+}
 
-int main()
-{
-    Bankaccount account(500);
-    account.deposit(200);
-    account.withdraw(100);
-    account.showbalance();
+bool salary::check(int value) {
+    return value >= 0;
+}
 
+void salary::set_salary() {
+    int amount;
+
+    for (int i = 0; i < 12; i++) {
+        cout << "Enter " << i + 1 << ". salary: ";
+        do {
+            cin >> amount;
+            if (!check(amount))
+                cout << "Invalid salary. Please enter again: ";
+        } while (!check(amount));
+
+        months[i] = amount;
+        total += months[i];
+    }
+}
+
+void salary::print() {
+    cout << "Monthly salaries:\n";
+
+    for (int i = 0; i < 12; i++)
+        cout << setw(2) << i + 1 << ". month: " << months[i] << endl;
+
+    cout << "Annual salary = " << total << endl;
+}
+
+int main() {
+    salary s;
+    s.set_salary();
+    s.print();
     return 0;
 }
