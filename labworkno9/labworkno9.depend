@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1746950428 source:c:\users\nesli\onedrive\masaüstü\c++ oop\labworkno9\main.cpp
+	<iostream>
+	"Array.h"
+
+1746881065 c:\users\nesli\onedrive\masaüstü\c++ oop\labworkno9\array.h
+	<iostream>
+
